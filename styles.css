@@ -94,8 +94,8 @@ body {
     padding: 25px 60px;
     margin-top: 15px;
     border: none;
-    color: white;
 }
+
 
 .btn-outline {
   display: block; /* Garante que o botão aceite margens automáticas */
@@ -257,6 +257,9 @@ td {
     margin-bottom: 1.5rem;
 }
 
+.clicavel:hover{
+    font-size: 1.2rem;
+}
 
 .alerta-setor {
     background-color: #242008;
