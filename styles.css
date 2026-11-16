@@ -176,17 +176,6 @@ body {
     border-color: #bdbdbd;
 }
 
-.pilotos {
-    background-color: #0b0b0f;
-    color: #ffff;
-}
-
-.equipes {
-    background-color: #0b0b0f; 
-    color: #ffff;
-}
-
-
 th {
     border-width: 0px;
     color: var(--muted);
@@ -196,6 +185,42 @@ th {
 td {
     border-width: 0px;
 }
+
+.buscar {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(40px, 1fr));
+    gap: 18px;
+}
+
+.filtrar {
+    background-color: #0b0b0f;
+    color: white;
+    padding: 10px 30px;
+    margin-left: 260px;
+    border-width: 3px;
+    border-color: #ffff;
+    font-size: 1.2rem;
+    text-align: right;
+}
+.pilotos {
+    padding: 10px 100px;
+    background-color: #0b0b0f;
+    color: #ffff;
+}
+
+.equipes {
+    padding: 10px 130px;
+    background-color: #0b0b0f; 
+    color: white;
+    border-width: 0px;
+}
+
+.qual-buscar {
+    padding-top: 10px;
+    color: #bdbdbd;
+}
+
 .positions {
     color: #0b0b0f;
     display: inline-flex;
@@ -213,6 +238,150 @@ td {
     width: 4px; height: 18px;
     background: var(--team);
 }
+
+.pts-destaque {
+    font-weight: 900;
+}
+
+
+.ingressos-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 2.5rem;
+}
+
+
+.subtitulo-ingressos {
+    color: var(--gray-text);
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+
+.alerta-setor {
+    background-color: #242008;
+    border-left: 4px solid #d4af37;
+    color: #ffd700;
+    padding: 0.9rem 1.2rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+
+.tabela-precos {
+    list-style: none;
+}
+
+
+.tabela-precos li {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--panel-border);
+    font-size: 0.95rem;
+}
+
+
+.tabela-precos .preco {
+    color: var(--red);
+    font-weight: 700;
+}
+
+
+.ingressos-card-form {
+    background-color: var(--panel);
+    border-top: 3px solid var(--red);
+    padding: 2rem;
+    border-radius: 4px;
+}
+
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+}
+
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+
+.campo-full {
+    grid-column: 1 / -1;
+}
+
+
+.campo label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--gray-text);
+    letter-spacing: 1px;
+}
+
+
+.campo input,
+.campo select,
+.campo textarea {
+    background-color: #0b0c10;
+    border: 1px solid var(--panel-border);
+    color: var(--white);
+    padding: 0.7rem 1rem;
+    border-radius: 3px;
+    font-family: var(--font);
+    font-size: 0.9rem;
+    outline: none;
+}
+
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    border-color: var(--red);
+}
+
+
+.input-file {
+    padding: 0.5rem;
+    background-color: #0b0c10;
+}
+
+
+.dica-campo {
+    font-size: 0.75rem;
+    color: var(--gray-text);
+}
+
+
+.btn-submit {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.9rem;
+}
+
+
+.rodape {
+    background-color: var(--panel);
+    text-align: center;
+    padding: 1.8rem 1rem;
+    border-top: 1px solid var(--panel-border);
+    color: var(--gray-text);
+    font-size: 0.85rem;
+}
+
+
+.rodape strong {
+    color: var(--white);
+}
+
+.titulogrande {
+    font-size: 2.5rem;
+}
+
 tbody tr:hover { background: #1e1e28; }
 
 .smallnumber {

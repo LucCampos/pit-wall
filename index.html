@@ -11,9 +11,9 @@
     <header class="topbar">
         <p class="logo">PIT<span>WALL</span></p>
         <div class="menu">
-        <a href="pilotos">Pilotos</a> 
-        <a href="classificação">Classificação</a> 
-        <a href="ingressos">Ingressos</a>
+        <a href="pilotos" style="color: #ffff; text-decoration: none;">Pilotos</a> 
+        <a href="classificação" style="color: #ffff; text-decoration: none;">Classificação</a> 
+        <a href="ingressos" style="color: #ffff; text-decoration: none;">Ingressos</a>
         </div>
         <button class="btn-classificacao"><a href="#ingressos" style="color: #ffff; text-decoration: none;"> <strong>COMPRAR INGRESSO</strong></a></button>
     </header>
@@ -22,7 +22,7 @@
  
     <section class="hero">
         <div class="margem">
-        <small class=" ">Autódromo de Interlagos · novembro de 2026</small>
+        <small class="">Autódromo de Interlagos · novembro de 2026</small>
         <h1 class=""><strong>GP DE <span>SÃO PAULO</span></strong></h1> 
         <p>71 voltas, 22 carros no grid e a torcida brasileira empurrando o Bortoleto na reta.</p>
 
@@ -56,7 +56,7 @@
     <main class="container">
     <section class="pilotos">
 
-        <h2>  <small class="smallnumber"style="color: #e10600;"><STRONG><em>01</em></small>  <em>GRID DE PILOTOS</em></STRONG></h2>
+        <h2>  <small class="smallnumber"style="color: #e10600;"><STRONG><em>01</em></small>  <em class="titulogrande">GRID DE PILOTOS</em></STRONG></h2>
         <div class="drivers">
         
         
@@ -92,14 +92,17 @@
             <br><br><br>
 
     <section class="classificacao">
-    <h2>  <small class="smallnumber"style="color: #e10600;"><STRONG><em>01</em></small>  <em>CLASSIFICAÇÃO</em></STRONG></h2>
+    <h2>  <small class="smallnumber"style="color: #e10600;"><STRONG><em>01</em></small> <em class="titulogrande">CLASSIFICAÇÃO</em></STRONG></h2>
 
-
-        <lable for="nome" class="qual-buscar">Buscar Piloto</label><br>
+        <section class="buscar">
+        <div class="opcoes">
+        <label for="nome" class="qual-buscar">Buscar Pilotos</label><br>
         <input type="text" id="nome" name="nome" placeholder="Nome ou equipe..." required class="pilotos"><br>
+        </div>
 
+        <div class="opcoes">
         <!-- Lista de seleção (select) -->
-        <label for="equipe" class="qual-buscar">Equipes</label>
+        <label for="equipe" class="qual-buscar">Equipes</label><br>
         <select id="equipe" name="equipe" class="equipes">
             <option value="">Todas as equipes</option>
             <option value="mclaren">McLaren</option>
@@ -107,9 +110,12 @@
             <option value="mercedes">Mercedes</option>
             <option value="audi">Audi</option>
         </select><br><br>
+        </div>
 
-
-        <button type="submit">Filtrar</button>
+        <div class="opcoes"><br>
+        <button type="submit" class="filtrar"><strong>Filtrar</strong></button>
+        </div>
+        </section>
         
         <!-- Botão de enviar -->
         <table border="1" class="tabela-principal">
@@ -162,17 +168,97 @@
      </table>
     </section>
 
-    <section class="ingressos" id="ingressos">
-    03
-    <h3>Ingressos</h3>
-    <div>
+    <section id="ingressos" class="secao">
+        <small class="smallnumber"style="color: #e10600;"><STRONG><em>03</em></small> <em class="titulogrande">INGRESSOS</em></STRONG></h2>
+            
+        <div class="ingressos-layout">
+            <div class="ingressos-info">
+                <p class="subtitulo-ingressos">Escolha o setor e venha ver a decisão do título de perto.</p>
+                    
+                <div class="alerta-setor">
+                    Últimos 120 lugares no Setor da Reta!
+                </div>
 
-        
-    <p>Escolha o setor e venha ver a decisão do título de perto.</p>
 
-    <p>Últimos 120 lugares no Setor da Reta!</p>
+                <ul class="tabela-precos">
+                    <li>
+                        <span>Arquibancada A</span>
+                        <span class="preco">R$ 480</span>
+                    </li>
+                    <li>
+                        <span>Setor da Reta</span>
+                        <span class="preco">R$ 890</span>
+                    </li>
+                    <li>
+                        <span>Box VIP</span>
+                        <span class="preco">R$ 2.400</span>
+                    </li>
+                </ul>
+            </div>
 
-    <p>Arquibancada A R$ 480</p>
-    <p>Setor da Reta R$ 890</p>
-    <p>Box VIP R$ 2400</p>
-    </div>
+
+            <div class="ingressos-card-form">
+                <form class="form-grid">
+                    <div class="campo">
+                        <label for="nome">NOME COMPLETO</label>
+                        <input type="text" id="nome" placeholder="Como está no documento" required>
+                    </div>
+
+
+                    <div class="campo">
+                        <label for="email">E-MAIL</label>
+                        <input type="email" id="email" placeholder="voce@email.com" required>
+                    </div>
+
+
+                    <div class="campo">
+                        <label for="setor">SETOR</label>
+                        <select id="setor" required>
+                            <option value="">Escolha o setor</option>
+                            <option value="arquibancada">Arquibancada A</option>
+                            <option value="reta">Setor da Reta</option>
+                            <option value="vip">Box VIP</option>
+                        </select>
+                    </div>
+
+
+                    <div class="campo">
+                        <label for="dia">DIA</label>
+                        <input type="date" id="dia" required>
+                    </div>
+
+
+                    <div class="campo">
+                        <label for="quantidade">INGRESSOS</label>
+                        <input type="number" id="quantidade" min="1" max="6" value="2" required>
+                        <span class="dica-campo">Até 6 por pessoa.</span>
+                    </div>
+
+
+                    <div class="campo">
+                        <label for="perfil">SEU PERFIL (OPCIONAL)</label>
+                        <input type="text" id="perfil" placeholder="https://instagram.com/...">
+                    </div>
+
+
+                    <div class="campo campo-full">
+                        <label>FOTO DA TORCIDA PARA O TELÃO</label>
+                        <input type="file" id="foto" class="input-file">
+                        <span class="dica-campo">JPG ou PNG · a melhor foto aparece no telão da reta!</span>
+                    </div>
+
+
+                    <div class="campo campo-full">
+                        <label for="recado">RECADO PARA O SEU PILOTO</label>
+                        <textarea id="recado" rows="3" placeholder="Vai, Bortoleto! Interlagos é sua casa..."></textarea>
+                    </div>
+
+
+                    <div class="campo campo-full">
+                        <button type="submit" class="btn-primary btn-submit">RESERVAR INGRESSOS</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
